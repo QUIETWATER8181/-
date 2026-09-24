@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <AssemblyName>HollowAll</AssemblyName>
+        <RootNamespace>HollowAll</RootNamespace>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <DebugType>portable</DebugType>
+        <OutputPath>bin\$(Configuration)\</OutputPath>
+        <LangVersion>latest</LangVersion>
+        <!-- 指向游戏 Managed 目录的参考快照（包含全部游戏程序集） -->
+        <HollowKnightRefs>$(MSBuildProjectDirectory)\..\hk-api12620\api\OutputFinal</HollowKnightRefs>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>$(HollowKnightRefs)\Assembly-CSharp.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>
